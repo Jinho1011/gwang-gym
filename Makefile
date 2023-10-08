@@ -4,8 +4,7 @@
 
 SHELL := /bin/bash
 
-APP_NAME = typescript-express
-APP_NAME := $(APP_NAME)
+APP_NAME = gwang-gym
 
 .PHONY: help up down clean db
 
