@@ -4,7 +4,7 @@ import { Service } from 'typedi';
 @Service()
 export class CoursesService {
   public async findAllCourses() {
-    const courses = CoursesModel;
+    const courses = await CoursesModel();
     return courses;
   }
 }
