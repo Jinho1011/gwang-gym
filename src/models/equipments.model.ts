@@ -1,6 +1,7 @@
-import { getFile } from '@/utils/aws';
+import { connectDb } from '@/db';
 
 export const EquipmentsModel = async () => {
-  const data = await getFile('equipments.json', 'gwang-gym-bucket');
-  return data;
+  const db = await connectDb();
+  const cursor = db.collection('equipments').find().toArray();
+  return cursor;
 };
